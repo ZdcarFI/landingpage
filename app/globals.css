@@ -1,26 +1,86 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+
+/* Color Variables Globales - MultiPe */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colores principales */
+  --color-primary: #3b82f6;
+  --color-primary-soft: #bfdbfe;
+  --color-primary-light: #dbeafe;
+  --color-primary-dark: #1e40af;
+
+  --color-secondary: #10b981;
+  --color-secondary-light: #d1fae5;
+  --color-secondary-dark: #047857;
+
+  /* Colores de fondo */
+  --color-background: #ffffff;
+  --color-background-light: #f9fafb;
+  --color-background-muted: #f3f4f6;
+
+  /* Colores de texto */
+  --color-text-dark: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-text-light: #9ca3af;
+
+  /* Colores de bordes */
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
+
+  /* Sombras premium */
+  --shadow-premium: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-premium-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Radio de borde */
+  --radius: 0.625rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+/* Componente Glass Card Global */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Estilos de color personalizados */
+.text-primary {
+  color: var(--color-primary);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-text-dark {
+  color: var(--color-text-dark);
+}
+
+.text-text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-background-light {
+  background-color: var(--color-background-light);
+}
+
+.bg-background-muted {
+  background-color: var(--color-background-muted);
 }
